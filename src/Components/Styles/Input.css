@@ -1,0 +1,51 @@
+#inp-container {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 50px;
+    bottom: 0;
+    width: 100%;
+    padding: 20px 0px;
+    font-family: 'Courier New', monospace;
+    font-size: 17px;
+}
+#inp {
+    position: absolute;
+    top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 80%;
+}
+.field {
+    display: inline-block;
+    text-align: left;
+    margin: 20px 0px 5px 0px;
+}
+input {
+    border: 3px solid pink;
+    width: 60px;
+    height: 30px;
+    font-family: 'Courier New', monospace;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-radius: 10px;
+    text-align: center;
+}
+#abstract {
+    font-size: 15px;
+}
+#submit {
+    display: inline-block;
+    width: 75px;
+    height: 35px;
+    border: 1px solid grey;
+    border-radius: 6px;
+    margin: 10px auto;
+    font-family: 'Courier New', monospace;
+    font-size: 16px;
+}
+#msg {
+    margin: 7px 0px 0px 0px;
+}
