@@ -1,6 +1,6 @@
 export async function fetchArxivData(ids, setRefItems) {
     try {
-        const url = `http://export.arxiv.org/api/query?id_list=${ids.join(',')}`;
+        const url = `https://export.arxiv.org/api/query?id_list=${ids.join(',')}`;
         const response = await fetch(url);
         const text = await response.text();
         const parser = new DOMParser();
