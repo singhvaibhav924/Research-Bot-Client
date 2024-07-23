@@ -6,12 +6,12 @@ import './App.css';
 
 function App() {
   const [page, setPage] = useState("i")
-  let output = {}
+  const [output, setOutput] = useState({})
   return (
     <div className="App">
       <Header />
       {page==="i" ?
-      <Input setPage = {setPage} output = {output} /> :
+      <Input setPage = {setPage} setOutput = {setOutput} /> :
       <Output setPage = {setPage} output = {output} />}
     </div>
   );

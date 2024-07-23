@@ -38,8 +38,8 @@ export default function Input(props) {
                 } else if(Number.isNaN(papers)) {
                     setMsg("No. of papers must be a number")
                 } else {
-                    setMsg("Please Wait... This might take a few minutes")
-                    generateLitReview(abs, words, papers, props.setPage, props.output)
+                    setMsg("Hang Tight... This might take a few seconds")
+                    generateLitReview(abs, words, papers, props.setPage, props.setOutput)
                 }
             }}>Submit</button> 
             </div>
