@@ -17,16 +17,18 @@ export function generateLitReview(abstract, words, papers, setPage, setOutput) {
         setPage("o");
     });
 }
-
 function fetchPlus(url, options) {
     console.log("Sending data to URL " + url);
     return fetch(url, options)
         .then((res) => {
             if (res.ok) {
                 return res.json();  // Return JSON if the response is okay
+            } else {
+                console.log("Retrying in 10 secs");
+                return new Promise((resolve) => {
+                    setTimeout(() => resolve(fetchPlus(url, options)), 10000);  // Retry after 10 seconds and resolve the returned promise
+                });
             }
-            console.log("Retrying in 10 secs");
-            setTimeout(() => fetchPlus(url, options), 10000);  // Retry after 10 seconds
         })
         .catch((error) => console.error(error.message));
 }
